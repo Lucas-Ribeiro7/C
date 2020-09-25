@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 700px;
+    margin: auto;
+}
+div.borda{
+    border-radius: 20px;
+    background-color: rgb(140, 173, 173);
+    margin: auto;
+    padding: 20px;
+}
+a{
+    text-decoration:none;
+    color: black;
+}
+h2{
+    text-align: center;
+}
+h2.sucesso{
+    text-align: center;
+    border-bottom: 10px;
+    background-color:green;
+}
