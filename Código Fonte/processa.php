@@ -1,15 +1,20 @@
 <?php
 
-$nome = $_POST['nome'];
-$sobrenome = $_POST['sobrenome'];
-$dt_nasc = $_POST['dt_nasc'];
+    $nome = $_POST['nome'];
+    $sobrenome = $_POST['sobrenome'];
+    
 
-include_once 'conexao.php';
+    //Conexão com o Banco
+    $con = mysqli_connect('localhost', 'root', '', 'cadastro');
 
-//echo "Nome: $nome <br>Sobrenome: $sobrenome <br>Data de Nascimento: $dt_nasc";
+    //Verificando se o $con tá zerado (Não tem)
+    if(!$con){
+        die("Não foi possivel conectar ao MySQL"); //Die finaliza o Script, caso seja verdadeiro do if() acima
+    }
 
+    $sql = "INSERT INTO `pessoa` (`id_pessoa`, `nome`, `sobrenome`) VALUES (NULL, '$nome', '$sobrenome');";
 
-/*
-$sql = "INSERT INTO cadastro (nome, sobrenome, datacriacao) VALUES ('$nome', '$sobrenome', date()";
-$resultado = mysqli_query($con, $sql);
-*/
+    mysqli_query($con, $sql) or die ("ERRO ao tentar cadastrar o Registro"); //or die é uma instrução caso tenha um erro na sintaxe do $sql
+    mysqli_close($con);
+    echo "<p>Cliente Cadastrado com Sucesso</p>";
+    

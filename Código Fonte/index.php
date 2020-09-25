@@ -17,10 +17,6 @@
         <input type="text" name="sobrenome" placeholder="Digite seu Sobrenome">
         <br>
         <br>
-        <label>Data de Nascimento</label>
-        <input type="date" name="dt_nasc">
-        <br>
-        <br>
         <input type="submit" name="enviar" value="Cadastrar">
     </form>
     
