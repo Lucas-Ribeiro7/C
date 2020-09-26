@@ -10,9 +10,9 @@
        <div class="borda">
             <?php
             include_once 'conexao.php';
-            
+
             $sql = "INSERT INTO `pessoa` (`id_pessoa`, `nome`, `sobrenome`) VALUES (NULL, '$nome', '$sobrenome');";
-            mysqli_query($con, $sql) or die ("ERRO ao tentar cadastrar o Registro"); //or die é uma instrução caso tenha um erro na sintaxe do $sql
+            mysqli_query($con, $sql) or die ("[ERRO] Não foi possivel efetuar o Cadastro"); //or die é uma instrução caso tenha um erro na sintaxe do $sql
             mysqli_close($con);
             echo "<h2 class='sucesso'>Cliente Cadastrado com Sucesso!!!</h2>";
             ?>
