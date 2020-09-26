@@ -9,8 +9,9 @@
 <body>
 
     <div class="borda">
-        <form action="" method="post">
+        <form action="selectfrom.php" method="post">
             <label>Escolha o que será pesquisado:</label>
+            <br>
             <br>
             <select name="escolha">
                 <option value="nome_pes">Nome</option>
@@ -22,19 +23,7 @@
         
         
         
-        <?php
-            $nome_pes = $_POST['nome_pes'];
-            $sobrenome_pes = $_POST['sobrenome_pes'];
-            $escolha = $_POST['escolha'];
-
-            switch($escolha){
-                case 'nome_pes' :
-                    $sql = "SELECT nome FROM pessoa WHERE nome LIKE '%$nome_pes%'";
-                    
-            }
-            mysqli_query($con, $sql) or die ("[ERRO] Não foi possivel efetuar a pesquisa."); //or die é uma instrução caso tenha um erro na sintaxe do $sql
-            mysqli_close($con);
-        ?>
+       
     </div>
     
 </body>
